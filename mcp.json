@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "screeps": {
-      "command": "node",
+      "command": "bun",
       "args": ["src/server.js"],
       "env": {
         "SCREEPS_DOCS_INDEX": "docs-index.json"

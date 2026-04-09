@@ -6,11 +6,11 @@
   "description": "Lean MCP server for Screeps Arena docs.",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "bun": ">=1.0.0"
   },
   "scripts": {
-    "start": "node src/server.js",
-    "index": "node src/index-docs.js"
+    "start": "bun src/server.js",
+    "index": "bun src/index-docs.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0"

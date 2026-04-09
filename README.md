@@ -8,13 +8,13 @@ Lean MCP server for Screeps Arena docs.
 
 ## Run
 ```bash
-npm install
-npm start
+bun install
+bun run start
 ```
 
 ## Index
 ```bash
-npm run index
+bun run index
 ```
 
 This writes `docs-index.json`, which the server will prefer over live fetches.
@@ -34,7 +34,7 @@ OpenCode or Claude can point at this server with stdio transport. Example config
 {
   "mcpServers": {
     "screeps": {
-      "command": "node",
+      "command": "bun",
       "args": ["/absolute/path/to/screeps-mcp/src/server.js"],
       "env": {
         "SCREEPS_DOCS_INDEX": "/absolute/path/to/screeps-mcp/docs-index.json"
