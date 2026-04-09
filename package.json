@@ -1,0 +1,18 @@
+{
+  "name": "screeps-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lean MCP server for Screeps Arena docs.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "index": "node src/index-docs.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0"
+  }
+}

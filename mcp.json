@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "screeps": {
+      "command": "node",
+      "args": ["src/server.js"],
+      "env": {
+        "SCREEPS_DOCS_INDEX": "docs-index.json"
+      }
+    }
+  }
+}
