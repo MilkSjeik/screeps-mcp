@@ -28,20 +28,21 @@ This writes `docs-index.json`, which the server will prefer over live fetches.
 - It is intentionally generic enough to reuse for other docs URLs.
 
 ## Client setup
-OpenCode or Claude can point at this server with stdio transport. Example config:
+OpenCode can point at this server with stdio transport. Use `bun` directly, not `bun x`:
 
 ```json
 {
-  "mcpServers": {
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
     "screeps": {
-      "command": "bun",
-      "args": ["/absolute/path/to/screeps-mcp/src/server.js"],
-      "env": {
-        "SCREEPS_DOCS_INDEX": "/absolute/path/to/screeps-mcp/docs-index.json"
+      "type": "local",
+      "command": ["bun", "../screeps-mcp/src/server.js"],
+      "environment": {
+        "SCREEPS_DOCS_INDEX": "../screeps-mcp/docs-index.json"
       }
     }
   }
 }
 ```
 
-If your client supports a dedicated config file, reuse the same fields.
+If you run OpenCode from a different directory, adjust the relative paths accordingly.
